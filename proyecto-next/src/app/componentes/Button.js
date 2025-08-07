@@ -1,12 +1,10 @@
-export default function Button(props) {
+"use client"
 
-    function Login() {
-        console.log("10")
-    }
+export default function Button(props) {
 
     return(
         <>
-            <button onClick={Login()}></button>
+            <button onClick={props.call}>{props.text}</button>
         </>
     )
 }

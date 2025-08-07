@@ -1,7 +1,9 @@
+"use client"
+
 export default function Input(props) {
     return(
         <>
-            <input type="text" id={props}>Ingrese su usuario</input>
+            <input type={(props.type)} id={(props.id)} placeholder={(props.placeholder)}></input>
         </>
     )
 }
