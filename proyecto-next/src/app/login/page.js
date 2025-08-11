@@ -12,13 +12,15 @@ export default function Login() {
 
     return(
         <>
-            <Title></Title>
+            <Title titulo="hola"></Title>
 
             <h3>Inicio de Sesion:  </h3>
 
             <Input id="username" type="text" placeholder="Ingrese su nombre de usuario"></Input>
-            <Input id="password" type="text" placeholder="Ingrese su contraseña"></Input>
+            <Input id="password" type="password" placeholder="Ingrese su contraseña"></Input>
             <Button text="HOLA SOY EL BOTON" call={InicioSesion}></Button>
+
+
         </>
     )
 }
