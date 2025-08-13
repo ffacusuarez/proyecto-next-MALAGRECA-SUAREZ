@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../componentes/Button";
 import Title from "../componentes/Title";
 import Input from "../componentes/Input";
@@ -11,6 +11,14 @@ export default function Contador() {
     const [checkbox, setCheckbox] = useState(false)
 
     
+    useEffect(() => {
+        if (cuenta == 20) {
+            setCuenta(0)
+        } else if (cuenta == -20){
+            setCuenta(0)
+        }
+    }, [cuenta])
+
     function Sumar() {
         setCuenta(cuenta + 1)
     }
