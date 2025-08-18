@@ -1,0 +1,16 @@
+.button {
+    color: red;
+    background-color: grey;
+    padding: 2rem;
+
+}
+
+.incremental {
+    background-color: green;
+    color: white;
+}
+
+.decreciente {
+    background-color: blue;
+    color: white;
+}

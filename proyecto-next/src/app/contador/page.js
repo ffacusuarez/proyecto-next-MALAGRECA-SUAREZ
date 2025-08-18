@@ -5,11 +5,15 @@ import Button from "../componentes/Button";
 import Title from "../componentes/Title";
 import Input from "../componentes/Input";
 
+
+
+
+
 export default function Contador() {
     
     const [cuenta, setCuenta] = useState(0)
     const [checkbox, setCheckbox] = useState(false)
-
+    const [color, setColor] = useState("green")
     
     useEffect(() => {
         if (cuenta == 20) {
@@ -40,15 +44,20 @@ export default function Contador() {
         console.log(event)
         setCheckbox(event.target.checked)
         console.log(checkbox)
+        if (event.target.checked == false) {
+            setColor("blue")
+        } else {
+            setColor("green")
+        }
     }
 
     return(
-        <>
-            <Title titulo="Hola soy el titulin"></Title>
+        <div className="contenedor">
+            <Title titulo="Hola soy el titulin" className="title"></Title>
 
-            <h2>Contador: {cuenta}</h2>
-            <Button onClick={Verificacion} text="Hola soy el boton"></Button>
-            <Input type="checkbox" onChange={llamarCheckBox}></Input>
-        </>
+            <h2 className="subtitulo">Contador: {cuenta}</h2>
+            <Button onClick={Verificacion} text="Hola soy el boton" className={color}></Button>
+            <Input type="checkbox" onChange={llamarCheckBox} className="input-checkbox"></Input>
+        </div>
     )
 }
