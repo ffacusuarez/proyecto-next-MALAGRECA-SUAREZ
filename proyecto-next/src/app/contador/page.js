@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Button from "../componentes/Button";
 import Title from "../componentes/Title";
 import Input from "../componentes/Input";
+import { useRouter } from "next/navigation";
 
 
 
@@ -14,14 +15,23 @@ export default function Contador() {
     const [cuenta, setCuenta] = useState(0)
     const [checkbox, setCheckbox] = useState(false)
     const [color, setColor] = useState("green")
-    
+    const router = useRouter()
+
+
     useEffect(() => {
         if (cuenta == 20) {
             setCuenta(0)
         } else if (cuenta == -20){
             setCuenta(0)
         }
+
     }, [cuenta])
+
+    useEffect(() => {
+        if (cuenta == 10) {
+            router.push("../login")
+        } 
+    })
 
     function Sumar() {
         setCuenta(cuenta + 1)
