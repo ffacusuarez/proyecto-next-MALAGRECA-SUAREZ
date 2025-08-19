@@ -56,7 +56,7 @@ export default function Contador() {
             <Title titulo="Hola soy el titulin" className="title"></Title>
 
             <h2 className="subtitulo">Contador: {cuenta}</h2>
-            <Button onClick={Verificacion} text="Hola soy el boton" className={color}></Button>
+            <Button onClick={Verificacion} text="Hola soy el boton" color={color}></Button>
             <Input type="checkbox" onChange={llamarCheckBox} className="input-checkbox"></Input>
         </div>
     )
